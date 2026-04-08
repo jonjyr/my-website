@@ -1,0 +1,8 @@
+:root {
+    --color-primary: #17AB2B,
+    --color-surface: #ffffff,
+    --font-base: system-ui,
+    --text-md: 1rem,
+    --space-sm: 0.5rem,
+    --space-md: 1rem,
+}
