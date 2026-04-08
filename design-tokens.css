@@ -1,8 +1,27 @@
+/* Base Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, p, figure, blockquote, dl, dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background-color: var(--color-surface);
+  color: var(--color-primary);
+  font-family: var(--font-base);
+}
+
+/* Token Ledger */
 :root {
-    --color-primary: #17AB2B;
-    --color-surface: #ffffff;
-    --font-base: system-ui;
-    --text-md: 1rem;
-    --space-sm: 0.5rem;
-    --space-md: 1rem;
+  --color-primary: #17AB2B;
+  --color-surface: #ffffff;
+  --font-base: system-ui;
+  --text-md: 1rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
 }
