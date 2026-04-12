@@ -13,7 +13,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    font: '--font-base',
-    size: '--text-md',
+    font: 'base',
+    size: 'md',
   },
 };
