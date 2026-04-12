@@ -1,4 +1,3 @@
-import styles from '../design-tokens.css';
 import { type ComponentPropsWithoutRef } from 'react';
 
 export type ButtonVariant = 'primary' | 'surface';
@@ -9,10 +8,13 @@ export interface ButtonProps extends ComponentPropsWithoutRef<'button'> {
     size: ButtonSize;
 };
 
-export const Button = ({ variant, size, ...props }: ButtonProps) => {
-    const variantClass = variant === 'primary' ? styles['--color-primary'] : styles['--color-surface'];
-    const sizeClass = size === 'sm' ? styles['--space-sm'] : styles['--space-md'];
-    const combinedClasses = `${variantClass} ${sizeClass}`;
+export const Button = ({ variant, size, style, ...props }: ButtonProps) => {
+    const dynamicTokens = {
+        backgroundColor: `var(--color-${variant})`,
+        padding: `var(--space-${size})`,
+        border: 'none',
+        ...style,
+    };
 
-    return <button className={combinedClasses} {...props} />;
+    return <button style={dynamicTokens} {...props} />;
 };
