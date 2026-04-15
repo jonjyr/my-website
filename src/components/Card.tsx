@@ -6,9 +6,13 @@ export interface CardProps extends ComponentPropsWithoutRef<'div'> {
   children: ReactNode;
 };
 
+export interface CardSubcomponentProps extends ComponentPropsWithoutRef<'div'> {
+  children: ReactNode;
+};
+
 export const Card = ({ children, background, size, style, ...props }: CardProps) => {
   const dynamicTokens = {
-    backgroundColor: `var(--font-${background})`,
+    backgroundColor: `var(--color-${background})`,
     padding: `var(--space-${size})`,
     ...style,
   };
@@ -20,20 +24,20 @@ export const Card = ({ children, background, size, style, ...props }: CardProps)
   );
 };
 
-export const CardHeader = ({ children }: CardProps) => (
-  <div>
+export const CardHeader = ({ children, ...props }: CardSubcomponentProps) => (
+  <div {...props}>
     {children}
   </div>
 );
 
-export const CardBody = ({ children }: CardProps) => (
-  <div>
+export const CardBody = ({ children, ...props }: CardSubcomponentProps) => (
+  <div {...props}>
     {children}
   </div>
 );
 
-export const CardFooter = ({ children }: CardProps) => (
-  <div>
+export const CardFooter = ({ children, ...props }: CardSubcomponentProps) => (
+  <div {...props}>
     {children}
   </div>
 );

@@ -24,14 +24,14 @@ export const Default: Story = {
   },
   render: (args) => (
     <Card {...args}>
-      <CardHeader background={args.background} size={args.size}>
-        <Text font="base" size="md">Card Header</Text>
+      <CardHeader>
+        <Text font="base" size="md">Card Header Text</Text>
       </CardHeader>
-      <CardBody background={args.background} size={args.size}>
+      <CardBody>
         <Text font="base" size="md">Card Body Text</Text>
       </CardBody>
-      <CardFooter background={args.background} size={args.size}>
-        <Button variant="primary" size="md">Button</Button>
+      <CardFooter>
+        <Button variant="primary" size="md">Card Footer Button</Button>
       </CardFooter>
     </Card>
   ),
