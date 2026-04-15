@@ -1,0 +1,12 @@
+.main-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  place-items: center;
+  height: 100vh;
+}
+
+.main-layout--gap-sm { gap: var(--space-sm); }
+.main-layout--gap-md { gap: var(--space-md); }
+
+.main-layout--padding-sm { padding: var(--space-sm); }
+.main-layout--padding-md { padding: var(--space-md); }
